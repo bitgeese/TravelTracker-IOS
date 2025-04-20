@@ -5,6 +5,7 @@ class AuthViewModel: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var isLoading: Bool = false
     @Published var error: String? = nil
+    @Published var currentUserEmail: String? = nil
     
     private let apiService: APIServiceProtocol
     private let keychainService: KeychainServiceProtocol
@@ -39,6 +40,7 @@ class AuthViewModel: ObservableObject {
             await MainActor.run {
                 self.isLoading = false
                 self.isLoggedIn = true
+                self.currentUserEmail = email
             }
             return true
         } catch let error as APIError {
@@ -100,6 +102,7 @@ class AuthViewModel: ObservableObject {
             await MainActor.run {
                 self.isLoading = false
                 self.isLoggedIn = true
+                self.currentUserEmail = email
             }
             return true
         } catch let error as APIError {
@@ -129,12 +132,14 @@ class AuthViewModel: ObservableObject {
             await MainActor.run {
                 self.isLoading = false
                 self.isLoggedIn = false
+                self.currentUserEmail = nil
             }
         } catch {
             await MainActor.run {
                 self.isLoading = false
                 // We still want to log out locally even if the server request fails
                 self.isLoggedIn = false
+                self.currentUserEmail = nil
             }
         }
     }

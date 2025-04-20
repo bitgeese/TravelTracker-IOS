@@ -33,7 +33,7 @@ struct SettingsView: View {
             
             Section(header: Text("Account")) {
                 if authViewModel.isLoggedIn {
-                    Text("User: user@example.com")
+                    Text("User: \(authViewModel.currentUserEmail ?? "Unknown")")
                         .foregroundColor(.secondary)
                     
                     Button("Log Out") {

@@ -125,7 +125,7 @@ struct RegistrationView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onChange(of: authViewModel.isLoggedIn) { _, newValue in
+        .onChange(of: authViewModel.isLoggedIn) { oldValue, newValue in
             if newValue {
                 dismiss()
             }
@@ -137,7 +137,7 @@ struct RegistrationView: View {
             let firstNameValue = firstName.isEmpty ? nil : firstName
             let lastNameValue = lastName.isEmpty ? nil : lastName
             
-            _ = await authViewModel.register(
+            let _ = await authViewModel.register(
                 email: email,
                 password: password,
                 confirmPassword: confirmPassword,
