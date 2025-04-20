@@ -1,0 +1,95 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cursor Context: Travel Tracker iOS Client (SwiftUI)
+
+This document outlines the technical specifications and architectural guidelines for the Travel Tracker iOS application's frontend, intended to provide context for the Cursor AI.
+
+Refer to [technical_specs.md](mdc:technical_specs.md) if needed 
+
+## Core Technologies
+
+* **Language:** Swift (latest stable version)
+* **UI Framework:** SwiftUI
+* **Platform Target:** iOS 15.0 and later
+* **Dependency Management:** Swift Package Manager (SPM), configured via `Package.swift`.
+
+## Architecture
+
+* **Pattern:** MVVM (Model-View-ViewModel)
+* **Views:** Implement UI using SwiftUI `View` structs.
+* **ViewModels:** Use classes conforming to `ObservableObject` to hold view state and logic.
+* **Models:**
+    * **Persistence:** Use Realm `Object` subclasses for the local database.
+    * **API Interaction:** Use `Codable` structs for serializing/deserializing data from network requests.
+* **Data Flow:** Employ Swift's `async/await` syntax for all asynchronous operations (networking, database access, etc.).
+
+## Networking
+
+* **Library:** Alamofire
+* **Implementation:** Centralize network requests within a dedicated `APIService` class.
+* **Concurrency:** Utilize `async/await` within the `APIService`.
+* **Authentication:** Implement JWT token refresh logic within the `APIService`.
+
+## Persistence
+
+* **SDK:** Realm Swift SDK
+* **Data Models:** Define local data structures as Realm `Object` subclasses.
+* **SwiftUI Integration:** Use Realm's dedicated SwiftUI property wrappers like `@ObservedResults` and `@ObservedRealmObject` for reactive UI updates.
+
+## Authentication
+
+* **Method:** Implement "Sign in with Apple" using Apple's `AuthenticationServices` framework.
+* **Token Storage:** Securely store JWT access and refresh tokens in the device Keychain (e.g., using a dedicated `KeychainService` utility class).
+
+## Key Libraries & SDKs
+
+* `Alamofire`: For networking.
+* `RealmSwift`: For local persistence.
+* `AuthenticationServices`: For Sign in with Apple.
+* `MapKit`: For displaying maps.
+* `UserNotifications`: For push notifications.
+* *(To Be Determined):* A specific third-party SwiftUI Calendar library will be chosen.
+
+## Core Logic & Features
+
+* **Synchronization:**
+    * **Strategy:** Implement a "Fetch-then-Update" approach. First, attempt to upload any local changes to the backend. Then, fetch the latest updates from the backend.
+    * **Conflict Resolution:** Use an `updated_at` timestamp field on relevant Realm objects. Apply a "Last Write Wins" strategy when merging server data with local data.
+* **CSV Import:**
+    * **File Selection:** Use SwiftUI's `.fileImporter` view modifier.
+    * **Upload:** Send the selected file to the backend API using `Alamofire`.
+    * **Status Tracking:** The backend should return a `task_id`. Poll a dedicated status endpoint with this `task_id` to monitor the import process using `async/await`.
+* **Offline Support:**
+    * Allow users to read and write data to the local Realm database even when offline.
+    * Implement logic to queue and sync local changes to the backend once network connectivity is restored.
+* **Map View:**
+    * Integrate `MapKit` with SwiftUI.
+    * Display visited countries/locations using annotations or overlays on the map.
+    * Visually indicate time spent at locations (e.g., through annotation callout details or color-coding).
+* **Notifications:**
+    * Utilize the `UserNotifications` framework.
+    * Register the app for Apple Push Notification service (APNS).
+    * Handle device token registration and refreshes, sending the token to the backend.
+    * Process and display incoming remote push notifications.
+
+## State Management
+
+* Primarily use built-in SwiftUI state management tools:
+    * `@State`
+    * `@StateObject`
+    * `@ObservedObject`
+    * `@EnvironmentObject`
+
+## Focus Files & Code Structure
+
+When providing context, prioritize understanding and consistency within these types of files:
+
+* SwiftUI `View` files (`*.swift`)
+* ViewModel classes (often ending in `ViewModel.swift`)
+* `APIService.swift`
+* Realm Object model definition files (`*.swift`)
+* `KeychainService.swift` (or similar Keychain utility)
+* `Package.swift` (for dependencies)

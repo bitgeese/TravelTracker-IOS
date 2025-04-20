@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3DF2D7E42DB52C3300A868D9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF2D7E32DB52C3300A868D9 /* RealmSwift */; };
+		3DF2D7E72DB52C8200A868D9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF2D7E62DB52C8200A868D9 /* Alamofire */; };
+		3DF2D7EA2DB52C9400A868D9 /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF2D7E92DB52C9400A868D9 /* ElegantCalendar */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3DD5A26E2DB5215C0036ACC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF2D7EA2DB52C9400A868D9 /* ElegantCalendar in Frameworks */,
+				3DF2D7E42DB52C3300A868D9 /* RealmSwift in Frameworks */,
+				3DF2D7E72DB52C8200A868D9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = TravelTracker;
 			packageProductDependencies = (
+				3DF2D7E32DB52C3300A868D9 /* RealmSwift */,
+				3DF2D7E62DB52C8200A868D9 /* Alamofire */,
+				3DF2D7E92DB52C9400A868D9 /* ElegantCalendar */,
 			);
 			productName = TravelTracker;
 			productReference = 3DD5A2602DB5215A0036ACC0 /* TravelTracker.app */;
@@ -195,6 +207,11 @@
 			);
 			mainGroup = 3DD5A2572DB5215A0036ACC0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3DF2D7E22DB52C3300A868D9 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				3DF2D7E52DB52C8200A868D9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3DF2D7E82DB52C9400A868D9 /* XCRemoteSwiftPackageReference "ElegantCalendar" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3DD5A2612DB5215A0036ACC0 /* Products */;
 			projectDirPath = "";
@@ -558,6 +575,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DF2D7E22DB52C3300A868D9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.2;
+			};
+		};
+		3DF2D7E52DB52C8200A868D9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		3DF2D7E82DB52C9400A868D9 /* XCRemoteSwiftPackageReference "ElegantCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThasianX/ElegantCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DF2D7E32DB52C3300A868D9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DF2D7E22DB52C3300A868D9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		3DF2D7E62DB52C8200A868D9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DF2D7E52DB52C8200A868D9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3DF2D7E92DB52C9400A868D9 /* ElegantCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DF2D7E82DB52C9400A868D9 /* XCRemoteSwiftPackageReference "ElegantCalendar" */;
+			productName = ElegantCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DD5A2582DB5215A0036ACC0 /* Project object */;
 }
