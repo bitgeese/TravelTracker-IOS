@@ -88,7 +88,7 @@ struct CountryDTO: Codable {
 }
 
 struct TravelSegmentDTO: Codable {
-    let id: String
+    var id: String
     let startDate: Date
     let endDate: Date
     let countryCode: String

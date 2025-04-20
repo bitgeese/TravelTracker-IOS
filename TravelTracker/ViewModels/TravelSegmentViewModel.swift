@@ -30,7 +30,7 @@ class TravelSegmentViewModel: ObservableObject {
     }
     
     func setupNotifications() {
-        guard let realm = realm, let segments = travelSegments else { return }
+        guard let _ = realm, let segments = travelSegments else { return }
         
         // Set up notification for changes to the travel segments collection
         let token = segments.observe { [weak self] changes in

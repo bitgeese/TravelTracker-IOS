@@ -168,7 +168,6 @@ struct DashboardView: View {
     
     private var currentLocation: String {
         // Use the most recent non-future travel segment to determine current location
-        let today = Calendar.current.startOfDay(for: Date())
         if let currentSegment = viewModel.travelSegments?.filter({ 
             $0.startDate <= Date() && $0.endDate >= Date() 
         }).first {

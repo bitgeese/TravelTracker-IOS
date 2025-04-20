@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     @State private var darkModeEnabled = false
     @State private var notificationsEnabled = true
     @State private var syncFrequency = "Daily"
@@ -9,68 +10,75 @@ struct SettingsView: View {
     let syncOptions = ["Manual", "Daily", "Weekly"]
     
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Appearance")) {
-                    Toggle("Dark Mode", isOn: $darkModeEnabled)
-                }
-                
-                Section(header: Text("Notifications")) {
-                    Toggle("Enable Notifications", isOn: $notificationsEnabled)
-                }
-                
-                Section(header: Text("Data Synchronization")) {
-                    Picker("Sync Frequency", selection: $syncFrequency) {
-                        ForEach(syncOptions, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    
-                    Button("Sync Now") {
-                        // This will be implemented in Phase 5 when we have a real backend
+        Form {
+            Section(header: Text("Appearance")) {
+                Toggle("Dark Mode", isOn: $darkModeEnabled)
+            }
+            
+            Section(header: Text("Notifications")) {
+                Toggle("Enable Notifications", isOn: $notificationsEnabled)
+            }
+            
+            Section(header: Text("Data Synchronization")) {
+                Picker("Sync Frequency", selection: $syncFrequency) {
+                    ForEach(syncOptions, id: \.self) {
+                        Text($0)
                     }
                 }
                 
-                Section(header: Text("Account")) {
-                    // These will be implemented in Phase 3 when we add authentication
-                    Text("User: Not Logged In")
+                Button("Sync Now") {
+                    // This will be implemented in Phase 5 when we have a real backend
+                }
+            }
+            
+            Section(header: Text("Account")) {
+                if authViewModel.isLoggedIn {
+                    Text("User: user@example.com")
                         .foregroundColor(.secondary)
-                    
-                    Button("Log In") {
-                        // Login will be implemented in Phase 3
-                    }
                     
                     Button("Log Out") {
                         showingLogoutAlert = true
                     }
                     .foregroundColor(.red)
-                    .disabled(true) // Disabled until authentication is implemented
-                }
-                
-                Section(header: Text("About")) {
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text("1.0.0")
-                            .foregroundColor(.secondary)
+                } else {
+                    Text("User: Not Logged In")
+                        .foregroundColor(.secondary)
+                    
+                    Button("Log In") {
+                        // Will use the sign-in sheet in a future implementation
+                        authViewModel.isLoggedIn = false
                     }
                 }
             }
-            .navigationTitle("Settings")
-            .alert("Log Out", isPresented: $showingLogoutAlert) {
-                Button("Cancel", role: .cancel) { }
-                Button("Log Out", role: .destructive) {
-                    // Logout will be implemented in Phase 3
+            
+            Section(header: Text("About")) {
+                HStack {
+                    Text("Version")
+                    Spacer()
+                    Text("1.0.0")
+                        .foregroundColor(.secondary)
                 }
-            } message: {
-                Text("Are you sure you want to log out?")
             }
+        }
+        .navigationTitle("Settings")
+        .alert("Log Out", isPresented: $showingLogoutAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Log Out", role: .destructive) {
+                Task {
+                    await authViewModel.logout()
+                }
+            }
+        } message: {
+            Text("Are you sure you want to log out?")
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationView {
+            SettingsView()
+                .environmentObject(AuthViewModel())
+        }
     }
 } 

@@ -13,13 +13,23 @@ struct ManualEntryView: View {
     
     // Get list of country codes in a more comprehensive way
     let countries: [(code: String, name: String)] = {
-        let locales = Locale.isoRegionCodes
-        return locales.compactMap { code in
-            if let name = Locale.current.localizedString(forRegionCode: code) {
-                return (code, name)
-            }
-            return nil
-        }.sorted { $0.name < $1.name }
+        if #available(iOS 16, *) {
+            return Locale.Region.isoRegions.compactMap { region in
+                if let code = region.identifier.uppercased() as String?,
+                   let name = Locale.current.localizedString(forRegionCode: code) {
+                    return (code, name)
+                }
+                return nil
+            }.sorted { $0.name < $1.name }
+        } else {
+            // Fallback for iOS 15
+            return Locale.isoRegionCodes.compactMap { code in
+                if let name = Locale.current.localizedString(forRegionCode: code) {
+                    return (code, name)
+                }
+                return nil
+            }.sorted { $0.name < $1.name }
+        }
     }()
     
     var body: some View {
