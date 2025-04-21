@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D3A45EA2DB651BF0097CFA9 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A45E92DB651BF0097CFA9 /* AppView.swift */; };
+		3D6FFEC12DB6481400BF2DA3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FFEC02DB6481400BF2DA3 /* Alamofire */; };
+		3D6FFEC42DB648F100BF2DA3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FFEC32DB648F100BF2DA3 /* RealmSwift */; };
+		3D6FFECF2DB6508500BF2DA3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FFECE2DB6508500BF2DA3 /* LoginView.swift */; };
+		3D6FFED12DB6514900BF2DA3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FFED02DB6514900BF2DA3 /* RegistrationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D6FFEA32DB6437D00BF2DA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D6FFE8D2DB6437B00BF2DA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D6FFE942DB6437B00BF2DA3;
+			remoteInfo = NomadTravelTracker;
+		};
+		3D6FFEAD2DB6437D00BF2DA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D6FFE8D2DB6437B00BF2DA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D6FFE942DB6437B00BF2DA3;
+			remoteInfo = NomadTravelTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D3A45E92DB651BF0097CFA9 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		3D6FFE952DB6437B00BF2DA3 /* NomadTravelTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomadTravelTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6FFEA22DB6437D00BF2DA3 /* NomadTravelTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTravelTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6FFEAC2DB6437D00BF2DA3 /* NomadTravelTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTravelTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6FFECA2DB64AB000BF2DA3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3D6FFECC2DB64ACF00BF2DA3 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		3D6FFECE2DB6508500BF2DA3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3D6FFED02DB6514900BF2DA3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3D6FFE972DB6437B00BF2DA3 /* NomadTravelTracker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NomadTravelTracker;
+			sourceTree = "<group>";
+		};
+		3D6FFEA52DB6437D00BF2DA3 /* NomadTravelTrackerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NomadTravelTrackerTests;
+			sourceTree = "<group>";
+		};
+		3D6FFEAF2DB6437D00BF2DA3 /* NomadTravelTrackerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NomadTravelTrackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D6FFE922DB6437B00BF2DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6FFEC42DB648F100BF2DA3 /* RealmSwift in Frameworks */,
+				3D6FFEC12DB6481400BF2DA3 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFE9F2DB6437D00BF2DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFEA92DB6437D00BF2DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D6FFE8C2DB6437B00BF2DA3 = {
+			isa = PBXGroup;
+			children = (
+				3D6FFEC92DB64A0F00BF2DA3 /* Utils */,
+				3D6FFEC82DB64A0800BF2DA3 /* Services */,
+				3D6FFEC72DB64A0200BF2DA3 /* Models */,
+				3D6FFEC62DB649F900BF2DA3 /* ViewModels */,
+				3D6FFEC52DB649E100BF2DA3 /* Views */,
+				3D6FFE972DB6437B00BF2DA3 /* NomadTravelTracker */,
+				3D6FFEA52DB6437D00BF2DA3 /* NomadTravelTrackerTests */,
+				3D6FFEAF2DB6437D00BF2DA3 /* NomadTravelTrackerUITests */,
+				3D6FFE962DB6437B00BF2DA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D6FFE962DB6437B00BF2DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FFE952DB6437B00BF2DA3 /* NomadTravelTracker.app */,
+				3D6FFEA22DB6437D00BF2DA3 /* NomadTravelTrackerTests.xctest */,
+				3D6FFEAC2DB6437D00BF2DA3 /* NomadTravelTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D6FFEC52DB649E100BF2DA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FFECE2DB6508500BF2DA3 /* LoginView.swift */,
+				3D6FFED02DB6514900BF2DA3 /* RegistrationView.swift */,
+				3D3A45E92DB651BF0097CFA9 /* AppView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D6FFEC62DB649F900BF2DA3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3D6FFEC72DB64A0200BF2DA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FFECC2DB64ACF00BF2DA3 /* RealmModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D6FFEC82DB64A0800BF2DA3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FFECA2DB64AB000BF2DA3 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3D6FFEC92DB64A0F00BF2DA3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D6FFE942DB6437B00BF2DA3 /* NomadTravelTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6FFEB62DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTracker" */;
+			buildPhases = (
+				3D6FFE912DB6437B00BF2DA3 /* Sources */,
+				3D6FFE922DB6437B00BF2DA3 /* Frameworks */,
+				3D6FFE932DB6437B00BF2DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3D6FFE972DB6437B00BF2DA3 /* NomadTravelTracker */,
+			);
+			name = NomadTravelTracker;
+			packageProductDependencies = (
+				3D6FFEC02DB6481400BF2DA3 /* Alamofire */,
+				3D6FFEC32DB648F100BF2DA3 /* RealmSwift */,
+			);
+			productName = NomadTravelTracker;
+			productReference = 3D6FFE952DB6437B00BF2DA3 /* NomadTravelTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D6FFEA12DB6437D00BF2DA3 /* NomadTravelTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6FFEB92DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTrackerTests" */;
+			buildPhases = (
+				3D6FFE9E2DB6437D00BF2DA3 /* Sources */,
+				3D6FFE9F2DB6437D00BF2DA3 /* Frameworks */,
+				3D6FFEA02DB6437D00BF2DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D6FFEA42DB6437D00BF2DA3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3D6FFEA52DB6437D00BF2DA3 /* NomadTravelTrackerTests */,
+			);
+			name = NomadTravelTrackerTests;
+			packageProductDependencies = (
+			);
+			productName = NomadTravelTrackerTests;
+			productReference = 3D6FFEA22DB6437D00BF2DA3 /* NomadTravelTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D6FFEAB2DB6437D00BF2DA3 /* NomadTravelTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6FFEBC2DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTrackerUITests" */;
+			buildPhases = (
+				3D6FFEA82DB6437D00BF2DA3 /* Sources */,
+				3D6FFEA92DB6437D00BF2DA3 /* Frameworks */,
+				3D6FFEAA2DB6437D00BF2DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D6FFEAE2DB6437D00BF2DA3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3D6FFEAF2DB6437D00BF2DA3 /* NomadTravelTrackerUITests */,
+			);
+			name = NomadTravelTrackerUITests;
+			packageProductDependencies = (
+			);
+			productName = NomadTravelTrackerUITests;
+			productReference = 3D6FFEAC2DB6437D00BF2DA3 /* NomadTravelTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D6FFE8D2DB6437B00BF2DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					3D6FFE942DB6437B00BF2DA3 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					3D6FFEA12DB6437D00BF2DA3 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3D6FFE942DB6437B00BF2DA3;
+					};
+					3D6FFEAB2DB6437D00BF2DA3 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3D6FFE942DB6437B00BF2DA3;
+					};
+				};
+			};
+			buildConfigurationList = 3D6FFE902DB6437B00BF2DA3 /* Build configuration list for PBXProject "NomadTravelTracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D6FFE8C2DB6437B00BF2DA3;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3D6FFEBF2DB6481400BF2DA3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3D6FFEC22DB648F100BF2DA3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3D6FFE962DB6437B00BF2DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D6FFE942DB6437B00BF2DA3 /* NomadTravelTracker */,
+				3D6FFEA12DB6437D00BF2DA3 /* NomadTravelTrackerTests */,
+				3D6FFEAB2DB6437D00BF2DA3 /* NomadTravelTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D6FFE932DB6437B00BF2DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFEA02DB6437D00BF2DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFEAA2DB6437D00BF2DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D6FFE912DB6437B00BF2DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3A45EA2DB651BF0097CFA9 /* AppView.swift in Sources */,
+				3D6FFECF2DB6508500BF2DA3 /* LoginView.swift in Sources */,
+				3D6FFED12DB6514900BF2DA3 /* RegistrationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFE9E2DB6437D00BF2DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6FFEA82DB6437D00BF2DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D6FFEA42DB6437D00BF2DA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D6FFE942DB6437B00BF2DA3 /* NomadTravelTracker */;
+			targetProxy = 3D6FFEA32DB6437D00BF2DA3 /* PBXContainerItemProxy */;
+		};
+		3D6FFEAE2DB6437D00BF2DA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D6FFE942DB6437B00BF2DA3 /* NomadTravelTracker */;
+			targetProxy = 3D6FFEAD2DB6437D00BF2DA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3D6FFEB42DB6437D00BF2DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D6FFEB52DB6437D00BF2DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D6FFEB72DB6437D00BF2DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D6FFEB82DB6437D00BF2DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D6FFEBA2DB6437D00BF2DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NomadTravelTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NomadTravelTracker";
+			};
+			name = Debug;
+		};
+		3D6FFEBB2DB6437D00BF2DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NomadTravelTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NomadTravelTracker";
+			};
+			name = Release;
+		};
+		3D6FFEBD2DB6437D00BF2DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NomadTravelTracker;
+			};
+			name = Debug;
+		};
+		3D6FFEBE2DB6437D00BF2DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TZWY8TR2D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adhdteam.NomadTravelTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NomadTravelTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D6FFE902DB6437B00BF2DA3 /* Build configuration list for PBXProject "NomadTravelTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6FFEB42DB6437D00BF2DA3 /* Debug */,
+				3D6FFEB52DB6437D00BF2DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6FFEB62DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6FFEB72DB6437D00BF2DA3 /* Debug */,
+				3D6FFEB82DB6437D00BF2DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6FFEB92DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6FFEBA2DB6437D00BF2DA3 /* Debug */,
+				3D6FFEBB2DB6437D00BF2DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6FFEBC2DB6437D00BF2DA3 /* Build configuration list for PBXNativeTarget "NomadTravelTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6FFEBD2DB6437D00BF2DA3 /* Debug */,
+				3D6FFEBE2DB6437D00BF2DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D6FFEBF2DB6481400BF2DA3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		3D6FFEC22DB648F100BF2DA3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D6FFEC02DB6481400BF2DA3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D6FFEBF2DB6481400BF2DA3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3D6FFEC32DB648F100BF2DA3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D6FFEC22DB648F100BF2DA3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3D6FFE8D2DB6437B00BF2DA3 /* Project object */;
+}

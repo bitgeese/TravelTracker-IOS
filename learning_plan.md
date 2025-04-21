@@ -23,21 +23,19 @@ Throughout these sessions, we will adhere to the following:
 
 Here's a breakdown of our planned sessions. We'll tackle one major feature or concept per session, building the app incrementally.
 
-**Session 1: Project Setup & Core Structure**
-*   Goal: Initialize the Xcode project and add essential dependencies.
-*   Tasks:
-    *   Create a new Xcode project using the App template (SwiftUI interface, Swift language).
-    *   Add dependencies using Swift Package Manager: Alamofire, RealmSwift.
-    *   Set up basic project folder structure (e.g., `Views`, `ViewModels`, `Models`, `Services`, `Utils`).
-    *   Briefly discuss the MVVM pattern in the context of our project.
+**Session 1: Project Setup & Core Structure** ✅
+*   ✅ Create a new Xcode project using the App template (SwiftUI interface, Swift language).
+*   ✅ Add dependencies using Swift Package Manager: Alamofire, RealmSwift.
+*   ✅ Set up basic project folder structure (e.g., `Views`, `ViewModels`, `Models`, `Services`, `Utils`).
+*   ✅ Briefly discuss the MVVM pattern in the context of our project.
 
-**Session 2: Authentication UI**
-*   Goal: Build the user interface for login and registration.
-*   Tasks:
-    *   Create `LoginView.swift` with text fields, buttons, and Sign in with Apple button placeholder.
-    *   Create `RegistrationView.swift` with necessary fields.
-    *   Use `@State` for managing form input.
-    *   Implement basic navigation between `LoginView` and `RegistrationView`.
+**Session 2: Authentication UI** ✅
+*   ✅ Goal: Build the user interface for login and registration.
+*   ✅ Tasks:
+    *   ✅ Create `LoginView.swift` with text fields, buttons, and Sign in with Apple button placeholder.
+    *   ✅ Create `RegistrationView.swift` with necessary fields.
+    *   ✅ Use `@State` for managing form input.
+    *   ✅ Implement basic navigation between `LoginView` and `RegistrationView`.
 
 **Session 3: Authentication Logic & Keychain**
 *   Goal: Set up the foundations for handling authentication logic and secure storage.
@@ -151,4 +149,4 @@ Here's a breakdown of our planned sessions. We'll tackle one major feature or co
 
 ---
 
-We can adjust this plan as we go. Ready to start with **Session 1: Project Setup & Core Structure**? 
+We can adjust this plan as we go. Ready to start with **Session 3: Authentication Logic & Keychain**? 
