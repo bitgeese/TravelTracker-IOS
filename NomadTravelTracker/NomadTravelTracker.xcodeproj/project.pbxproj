@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D3A45EA2DB651BF0097CFA9 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A45E92DB651BF0097CFA9 /* AppView.swift */; };
+		3D3A45ED2DB66AC00097CFA9 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A45EB2DB663AA0097CFA9 /* KeychainService.swift */; };
+		3D3A45EE2DB6A41D0097CFA9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FFECA2DB64AB000BF2DA3 /* APIService.swift */; };
+		3D3A45EF2DB6A4220097CFA9 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A45EC2DB669620097CFA9 /* AuthViewModel.swift */; };
 		3D6FFEC12DB6481400BF2DA3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FFEC02DB6481400BF2DA3 /* Alamofire */; };
 		3D6FFEC42DB648F100BF2DA3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FFEC32DB648F100BF2DA3 /* RealmSwift */; };
 		3D6FFECF2DB6508500BF2DA3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FFECE2DB6508500BF2DA3 /* LoginView.swift */; };
@@ -33,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		3D3A45E92DB651BF0097CFA9 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		3D3A45EB2DB663AA0097CFA9 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		3D3A45EC2DB669620097CFA9 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		3D6FFE952DB6437B00BF2DA3 /* NomadTravelTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomadTravelTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6FFEA22DB6437D00BF2DA3 /* NomadTravelTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTravelTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6FFEAC2DB6437D00BF2DA3 /* NomadTravelTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTravelTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +130,7 @@
 		3D6FFEC62DB649F900BF2DA3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A45EC2DB669620097CFA9 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 		3D6FFEC82DB64A0800BF2DA3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A45EB2DB663AA0097CFA9 /* KeychainService.swift */,
 				3D6FFECA2DB64AB000BF2DA3 /* APIService.swift */,
 			);
 			path = Services;
@@ -304,6 +311,9 @@
 			files = (
 				3D3A45EA2DB651BF0097CFA9 /* AppView.swift in Sources */,
 				3D6FFECF2DB6508500BF2DA3 /* LoginView.swift in Sources */,
+				3D3A45EF2DB6A4220097CFA9 /* AuthViewModel.swift in Sources */,
+				3D3A45ED2DB66AC00097CFA9 /* KeychainService.swift in Sources */,
+				3D3A45EE2DB6A41D0097CFA9 /* APIService.swift in Sources */,
 				3D6FFED12DB6514900BF2DA3 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

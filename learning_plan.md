@@ -37,13 +37,13 @@ Here's a breakdown of our planned sessions. We'll tackle one major feature or co
     *   ✅ Use `@State` for managing form input.
     *   ✅ Implement basic navigation between `LoginView` and `RegistrationView`.
 
-**Session 3: Authentication Logic & Keychain**
-*   Goal: Set up the foundations for handling authentication logic and secure storage.
-*   Tasks:
-    *   Create `KeychainService.swift` utility for saving/loading tokens.
-    *   Create `AuthViewModel.swift` (ObservableObject) to manage authentication state and logic.
-    *   Begin implementing "Sign in with Apple" functionality (requesting credentials).
-    *   Create `APIService.swift` foundation (class structure, Alamofire session setup).
+**Session 3: Authentication Logic & Keychain** ✅
+*   ✅ Goal: Set up the foundations for handling authentication logic and secure storage.
+*   ✅ Tasks:
+    *   ✅ Create `KeychainService.swift` utility for saving/loading tokens.
+    *   ✅ Create `AuthViewModel.swift` (ObservableObject) to manage authentication state and logic.
+    *   ✅ Begin implementing "Sign in with Apple" functionality (requesting credentials).
+    *   ✅ Create `APIService.swift` foundation (class structure, Alamofire session setup).
 
 **Session 4: Networking - API Service & Auth Calls**
 *   Goal: Connect authentication UI to the backend API.
@@ -149,4 +149,4 @@ Here's a breakdown of our planned sessions. We'll tackle one major feature or co
 
 ---
 
-We can adjust this plan as we go. Ready to start with **Session 3: Authentication Logic & Keychain**? 
+We can adjust this plan as we go. Ready to start with **Session 4: Networking - API Service & Auth Calls**? 
